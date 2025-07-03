@@ -1,0 +1,300 @@
+:root {
+  --oliva-dorado: #736743;
+  --oro-palido: #BFB38F;
+  --beige-suave: #D9D1B8;
+  --gris-carbon: #262626;
+  --negro-profundo: #0D0D0D;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color:var(--beige-suave);
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.main-nav a:hover {
+  background-color: #dbc1ac;
+}
+
+div h1{
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.4em;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "Sigmar", sans-serif
+}
+
+header h1{
+
+    font-family: "Poppins", sans-serif;
+    font-size: 3.6em;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+body {
+    color: #F5F2E7; 
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  color:#F5F2E7; 
+}
+
+p {
+  color: #F5F2E7; 
+}
+
+.footer-text {
+  color: #9A9A9A; 
+}
+ul, ol {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  justify-content: center;
+  font-size: 1.6em;
+
+}
+
+
+
+button:hover {
+  background-color: #F5F2E7;
+
+  transition: 0.3s ease;
+}
+body {
+  background-color: var(--negro-profundo);
+  color: var(--beige-suave);
+}
+
+h1 {
+  color: var(--oro-palido);
+}
+
+button {
+  background-color: var(--oliva-dorado);
+  color: var(--negro-profundo);
+}
+
+.card {
+  background-color: var(--gris-carbon);
+  border: 1px solid var(--oliva-dorado);
+}
+
+/* From Uiverse.io by DavidTM96 */ 
+.form {
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: inherit;
+  gap: 10px;
+  padding-inline: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid #736743;
+  border-radius: 20px;
+  color: #D9D1B8;
+  width: 100%;
+  height: 94%;
+  margin: 0 auto;
+}
+
+.form-heading {
+  text-align: center;
+  margin: 2em;
+  color: var(--beige-suave);
+  font-size: 2.3em;
+  background-color: transparent;
+  align-self: center;
+  font-family: "Raleway", sans-serif;
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  font-family: "Raleway", sans-serif;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #ccd6f6;
+  padding-inline: 1em;
+   font-family: "Raleway", sans-serif;
+}
+.a-btn{
+  justify-content: center;
+  text-decoration: none;
+
+}
+.sendMessage-btn  {
+  cursor: pointer;
+  margin-bottom: 3em;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--beige-suave);
+  font-weight: bold;
+  outline: 1px solid var(--beige-suave);
+  transition: all ease-in-out 0.3s;
+   font-family: "Raleway", sans-serif;
+   justify-content: center;
+}
+
+.sendMessage-btn:hover {
+  transition: all ease-in-out 0.3s;
+  background-color: var(--beige-suave);
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+   font-family: "Raleway", sans-serif;
+}
+
+.form-card1 {
+  background-image: linear-gradient(163deg, var(--beige-suave) 0%, var(--beige-suave) 100%);
+  border-radius: 22px;
+  transition: all 0.3s;
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-card1:hover {
+  box-shadow: 0px 0px 30px 1px rgba(226, 168, 7, 0.3);
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-card2 {
+  border-radius: 0;
+  transition: all 0.2s;
+}
+
+.form-card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.form-main{
+    justify-content: center;
+    
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.table-registers {
+  background-color: var(--gris-carbon);
+  border: 2px solid var(--oliva-dorado);
+  color: var(--beige-suave);
+  border-radius: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.table-registers th {
+  background-color: var(--oliva-dorado);
+  color: var(--beige-suave);
+  text-align: center;
+  padding: 10px;
+}
+
+.table-registers td {
+  background-color: var(--beige-suave);
+  color: var(--gris-carbon);
+  border-top: 1px solid var(--beige-suave);
+  padding: 10px;
+}
+
+.table-registers tr:hover {
+  background-color: rgba(191, 179, 143, 0.1);
+  transition: 0.3s ease;
+}
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: var(--beige-suave);
+  border: 1px solid var(--oro-palido);
+  color: var(--negro-profundo);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  appearance: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--oliva-dorado);
+  box-shadow: 0 0 0 3px rgba(115, 103, 67, 0.3);
+  background-color: #f9f6f0;
+}
+
+option {
+  color: var(--negro-profundo);
+  background-color: #ffffff;
+}
+
+.alert-polaris {
+  background-color: var(--oliva-dorado);
+  color: var(--beige-suave);
+  border: 1px solid var(--oro-palido);
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
