@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Usuarios - GlampingApp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">🏕️ GlampingApp</h2>
+      <ul class="nav-links">
+        <li><a href="/usuarios">Usuarios</a></li>
+        <li><a href="/glampings">Glampings</a></li>
+        <li><a href="/alojamientos">Alojamientos</a></li>
+        <li><a href="/huespedes">Huéspedes</a></li>
+        <li><a href="/empleados">Empleados</a></li>
+        <li><a href="/reservas">Reservas</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/reportes">Reportes</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>👤 Crear Usuario</h2>
+    <form action="/crear_usuario" method="POST" class="form-section">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="text" name="apellido" placeholder="Apellido" required>
+      <input type="number" name="edad" placeholder="Edad" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <button class="btn">Registrar</button>
+    </form>
+
+    {% if usuarios %}
+    <div class="personas-list">
+      {% for u in usuarios %}
+      <div class="persona-item">{{ u.nombre }} {{ u.apellido }} - {{ u.edad }} años - {{ u.email }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>

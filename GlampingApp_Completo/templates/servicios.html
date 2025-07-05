@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Servicios - GlampingApp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">🏕️ GlampingApp</h2>
+      <ul class="nav-links">
+        <li><a href="/usuarios">Usuarios</a></li>
+        <li><a href="/glampings">Glampings</a></li>
+        <li><a href="/alojamientos">Alojamientos</a></li>
+        <li><a href="/huespedes">Huéspedes</a></li>
+        <li><a href="/empleados">Empleados</a></li>
+        <li><a href="/reservas">Reservas</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/reportes">Reportes</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>🛎️ Servicios Disponibles</h2>
+
+    {% if servicios %}
+    <div class="personas-list">
+      {% for s in servicios %}
+      <div class="persona-item">{{ s.nombre }} - ${{ s.precio }}</div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="no-personas">No hay servicios registrados.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

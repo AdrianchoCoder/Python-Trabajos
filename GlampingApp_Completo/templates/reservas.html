@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservas - GlampingApp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">🏕️ GlampingApp</h2>
+      <ul class="nav-links">
+        <li><a href="/usuarios">Usuarios</a></li>
+        <li><a href="/glampings">Glampings</a></li>
+        <li><a href="/alojamientos">Alojamientos</a></li>
+        <li><a href="/huespedes">Huéspedes</a></li>
+        <li><a href="/empleados">Empleados</a></li>
+        <li><a href="/reservas">Reservas</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/reportes">Reportes</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>📅 Crear Reserva</h2>
+    <form action="/crear_reserva" method="POST" class="form-section">
+      <input type="text" name="huesped" placeholder="Nombre del huésped" required>
+      <input type="text" name="alojamiento" placeholder="Tipo de alojamiento" required>
+      <select name="temporada" required>
+        <option value="alta">Temporada Alta</option>
+        <option value="media">Temporada Media</option>
+        <option value="baja">Temporada Baja</option>
+      </select>
+      <button class="btn">Reservar</button>
+    </form>
+
+    {% if reservas %}
+    <div class="personas-list">
+      {% for r in reservas %}
+      <div class="persona-item">{{ r.huesped }} reservó {{ r.alojamiento }} - Temporada: {{ r.temporada }} - ${{ r.precio_total }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>

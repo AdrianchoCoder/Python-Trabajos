@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Glampings - GlampingApp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">🏕️ GlampingApp</h2>
+      <ul class="nav-links">
+        <li><a href="/usuarios">Usuarios</a></li>
+        <li><a href="/glampings">Glampings</a></li>
+        <li><a href="/alojamientos">Alojamientos</a></li>
+        <li><a href="/huespedes">Huéspedes</a></li>
+        <li><a href="/empleados">Empleados</a></li>
+        <li><a href="/reservas">Reservas</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/reportes">Reportes</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>🏡 Crear Glamping</h2>
+    <form action="/crear_glamping" method="POST" class="form-section">
+      <input type="text" name="glamping_nombre" placeholder="Nombre" required>
+      <input type="text" name="ubicacion" placeholder="Ubicación" required>
+      <input type="number" name="capacidad" placeholder="Capacidad" required>
+      <input type="number" name="precio" placeholder="Precio por noche" required>
+      <button class="btn">Registrar</button>
+    </form>
+
+    {% if glampings %}
+    <div class="personas-list">
+      {% for g in glampings %}
+      <div class="persona-item">{{ g.nombre }} - {{ g.ubicacion }} - ${{ g.precio }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
